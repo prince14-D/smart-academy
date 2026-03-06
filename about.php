@@ -19,8 +19,8 @@
     <div class="container">
         <div class="row g-5">
             <!-- Mission -->
-            <div class="col-lg-6">
-                <div class="feature-card h-100">
+            <div class="col-lg-6 fade-in-item">
+                <div class="feature-card h-100 animate-slide-left">
                     <div class="feature-icon" style="background: linear-gradient(135deg, var(--primary-blue), var(--accent-yellow));">
                         <i class="bi bi-target"></i>
                     </div>
@@ -32,8 +32,8 @@
             </div>
 
             <!-- Vision -->
-            <div class="col-lg-6">
-                <div class="feature-card h-100">
+            <div class="col-lg-6 fade-in-item">
+                <div class="feature-card h-100 animate-slide-right">
                     <div class="feature-icon" style="background: linear-gradient(135deg, var(--accent-orange), var(--primary-blue));">
                         <i class="bi bi-eye"></i>
                     </div>
@@ -57,7 +57,7 @@
 
         <div class="row g-4">
             <!-- Excellence -->
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 fade-in-item">
                 <div class="program-card text-center">
                     <h5 class="fw-bold text-primary-blue mb-3">
                         <i class="bi bi-star-fill text-warning"></i> Excellence
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Discipline -->
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 fade-in-item">
                 <div class="program-card text-center">
                     <h5 class="fw-bold text-primary-blue mb-3">
                         <i class="bi bi-shield-check"></i> Discipline
@@ -77,7 +77,7 @@
             </div>
 
             <!-- Integrity -->
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4 fade-in-item">
                 <div class="program-card text-center">
                     <h5 class="fw-bold text-primary-blue mb-3">
                         <i class="bi bi-hand-thumbs-up"></i> Integrity

@@ -67,6 +67,53 @@
 </section>
 
 <!-- ============================================
+     ADMISSIONS CALL TO ACTION
+     ============================================ -->
+<section class="admissions-cta py-5 text-white">
+    <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+            <div class="col-md-8">
+                <h2 class="cta-title fw-bold mb-3">
+                    Admissions Now Open at Smart Academy School
+                </h2>
+                <p class="cta-text mb-4">
+                    Enroll today and become part of a disciplined and excellence-driven learning community committed to Academic Success and Character Development.
+                </p>
+
+                <!-- Countdown -->
+                <div id="countdown" class="countdown d-flex justify-content-center justify-content-md-start mt-4 gap-3 flex-wrap">
+                    <div class="time-box">
+                        <h3 id="days">00</h3>
+                        <small>Days</small>
+                    </div>
+                    <div class="time-box">
+                        <h3 id="hours">00</h3>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time-box">
+                        <h3 id="minutes">00</h3>
+                        <small>Minutes</small>
+                    </div>
+                    <div class="time-box">
+                        <h3 id="seconds">00</h3>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center mt-4 mt-md-0">
+                <a href="admissions.php" class="btn btn-warning btn-lg mb-3 w-100 fw-bold">
+                    Apply for Admission
+                </a>
+                <a href="contact.php" class="btn btn-outline-light btn-lg w-100">
+                    Contact the School
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
      ABOUT SECTION
      ============================================ -->
 <section class="py-5">
@@ -171,8 +218,8 @@
 
         <div class="row g-4">
             <!-- Qualified Teachers -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="feature-card animate-slide-up">
                     <div class="feature-icon">
                         <i class="bi bi-person-badge"></i>
                     </div>
@@ -182,8 +229,8 @@
             </div>
 
             <!-- Safe & Modern Facilities -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="feature-card animate-slide-up">
                     <div class="feature-icon">
                         <i class="bi bi-building"></i>
                     </div>
@@ -193,8 +240,8 @@
             </div>
 
             <!-- Holistic Development -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="feature-card animate-slide-up">
                     <div class="feature-icon">
                         <i class="bi bi-lightbulb"></i>
                     </div>
@@ -204,8 +251,8 @@
             </div>
 
             <!-- Small Class Sizes -->
-            <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="feature-card animate-slide-up">
                     <div class="feature-icon">
                         <i class="bi bi-people-fill"></i>
                     </div>
@@ -280,8 +327,8 @@
 
         <div class="row g-4">
             <!-- Testimonial 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="testimonial-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="testimonial-card animate-slide-up">
                     <div class="mb-3">
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
@@ -296,8 +343,8 @@
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="testimonial-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="testimonial-card animate-slide-up">
                     <div class="mb-3">
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
@@ -312,8 +359,8 @@
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="testimonial-card">
+            <div class="col-lg-4 col-md-6 fade-in-item">
+                <div class="testimonial-card animate-slide-up">
                     <div class="mb-3">
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
@@ -441,5 +488,35 @@
         <a href="contact.php" class="cta-button">Send us a Message</a>
     </div>
 </section>
+
+<!-- Countdown Timer Script -->
+<script>
+    // Set the countdown Date (30 days from today)
+    const countDownDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000);
+
+    // Update the countdown timer every 1 second
+    const countdownTimer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        // Calculate time units
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Add leading zeros
+        document.getElementById("days").innerText = String(days).padStart(2, '0');
+        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+        // Stop countdown if time is up
+        if (distance < 0) {
+            clearInterval(countdownTimer);
+            document.getElementById("countdown").innerHTML = "<h3 class='text-center w-100'>Admissions Closing Soon!</h3>";
+        }
+    }, 1000);
+</script>
 
 <?php include("includes/footer.php"); ?>
